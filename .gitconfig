@@ -1,0 +1,78 @@
+[color]
+  ui = true
+  interactive = true 
+[color "branch"]
+  current = yellow reverse
+  local = red
+  remote = green reverse
+[color "diff"]
+  meta = cyan
+  frag = cyan reverse
+  new = green
+  old = red
+  whitespace = red reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  tool = opendiff
+[alias]
+  co = checkout
+  ci = commit -v
+  ca = commit --amend
+  unstage = reset HEAD
+  rollback = reset --soft HEAD^
+  glog = log --graph
+  llog = log --date=local
+  slog = log --stat --summary    
+  plog = log --pretty=oneline
+  tree = log --pretty=oneline --abbrev-commit --decorate --graph --all
+  st = status
+  br = branch
+  df = diff
+  dfc = diff --cached
+  dhf = diff HEAD --
+  dfs = diff --stat
+  dfw = diff -w
+  who = shortlog -s --
+  count = shortlog -sn
+  edit-modified = "!f() { git ls-files --modified | cut -f2 | sort -u ; }; vim -p `f`"
+  edit-conflicts = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
+  sub = submodule update
+  subi = submodule update --init
+  subir = submodule update --init --recursive
+  last = log -1 HEAD
+  last-local = show-branch -r --list
+  last-all = show-branch -r --list
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  pick = add -p
+  ls = ls-files
+  cp = cherry-pick
+  llog = log --date=local
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  rmdf = !git rm $(git ls-files --deleted)                                                                              
+  auto-clean = clean -fd                                                                                             
+  auto-remove = clean -fdx
+  find = "!func() { git grep $1 $(git rev-list --all); }; func"
+  prev = checkout HEAD^1                                                                                                
+  next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
+  lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
+  timesheet = "log --since='1 sunday ago' --until=now --oneline --no-merges"
+  standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges"
+  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+[gc]
+  auto = 0
+[diff]
+  noprefix = true
+[rerere]
+  enabled = true
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[core]
+  excludesfiles = ~/.gitignore_global
+[push]
+  default = simple
