@@ -53,16 +53,17 @@
   llog = log --date=local
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  rmdf = !git rm $(git ls-files --deleted)                                                                              
-  auto-clean = clean -fd                                                                                             
+  rmdf = !git rm $(git ls-files --deleted)
+  auto-clean = clean -fd
   auto-remove = clean -fdx
   find = "!func() { git grep $1 $(git rev-list --all); }; func"
-  prev = checkout HEAD^1                                                                                                
+  prev = checkout HEAD^1
   next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
   lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
   timesheet = "log --since='1 sunday ago' --until=now --oneline --no-merges"
   standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges"
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+  committers = "shortlog -nse --no-merges"
 [gc]
   auto = 0
 [diff]
