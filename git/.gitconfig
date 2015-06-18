@@ -77,3 +77,5 @@
   excludesfiles = ~/.gitignore_global
 [push]
   default = simple
+[rebase]
+  autosquash = true
