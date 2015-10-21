@@ -4,6 +4,10 @@ alias c="clear"
 alias gti="git"
 alias q="exit"
 
+# git duet
+alias dci = duet-commit
+alias drv = duet-revert
+
 # Docker environment variables
 alias de="env | grep DOCKER_"
 # Delete all containers
