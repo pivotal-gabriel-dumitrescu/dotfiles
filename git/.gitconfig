@@ -17,6 +17,7 @@
   untracked = cyan
 [merge]
   tool = opendiff
+	conflictstyle = diff3
 [alias]
   co = checkout
   ci = commit -v
@@ -62,7 +63,7 @@
   next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
   lsch = "!f() { git diff --name-status -r \"HEAD~$1\"; }; f"
   timesheet = "log --since='1 sunday ago' --until=now --oneline --no-merges"
-  standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges"
+  standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges --author=Gabriel"
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
   committers = "shortlog -nse --no-merges"
 [gc]
@@ -80,3 +81,6 @@
   default = simple
 [rebase]
   autosquash = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
