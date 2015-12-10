@@ -66,6 +66,7 @@
   standup = "log --since='yesterday.midnight' --until=midnight --oneline --no-merges --author=Gabriel"
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
   committers = "shortlog -nse --no-merges"
+  committers-pairs = "git log --pretty=format:%ad:%an --date=short | grep ' and ' | sort | uniq | sed 's/^.*://' | sort | uniq -c | sort -rn"
 [gc]
   auto = 0
 [diff]
