@@ -32,7 +32,7 @@
   tree = log --pretty=oneline --abbrev-commit --decorate --graph --all
   st = status
   br = branch
-  df = diff
+  df = diff -w
   dfc = diff --cached
   dhf = diff HEAD --
   dfs = diff --stat
