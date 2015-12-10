@@ -17,7 +17,7 @@
   untracked = cyan
 [merge]
   tool = opendiff
-	conflictstyle = diff3
+  #conflictstyle = diff3
 [alias]
   co = checkout
   ci = commit -v
