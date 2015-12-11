@@ -9,6 +9,7 @@ alias dci = duet-commit
 alias drv = duet-revert
 
 # Docker
+alias dockerup='bash --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh"'
 alias machine='docker-machine'
 alias compose='docker-compose'
 alias fig='docker-compose'
