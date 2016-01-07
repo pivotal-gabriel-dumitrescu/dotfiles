@@ -5,9 +5,9 @@ alias gti="git"
 alias q="exit"
 
 # git duet
-alias dci = duet-commit
-alias drv = duet-revert
-alias dmg = duet-merge
+alias dci='git duet-commit'
+alias drv='git duet-revert'
+alias dmg='git duet-merge'
 
 # Docker
 alias dockerup='bash --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh"'
