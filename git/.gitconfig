@@ -21,7 +21,9 @@
 [alias]
   co = checkout
   ci = commit -v
-  dci = duet-commit -v
+  dci = duet-commit
+  drv = duet-revert
+  dmg = duet-merge
   ca = commit --amend
   unstage = reset HEAD
   rollback = reset --soft HEAD^
