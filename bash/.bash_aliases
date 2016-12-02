@@ -19,5 +19,7 @@ alias fig='docker-compose'
 alias de="env | grep DOCKER_"
 # Delete all containers
 alias drm="docker rm $(docker ps -a -q)"
+# Delete dangling images
+alias drmid="docker rmi $(docker images -q --filter dangling=true)"
 # Delete all images
-alias drmi="docker rmi $(docker images -q)"
+alias drmia="docker rmi $(docker images -q)"
