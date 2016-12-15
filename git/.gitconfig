@@ -19,6 +19,12 @@
   tool = opendiff
   #conflictstyle = diff3
 [alias]
+  change = codereview change
+  gofmt = codereview gofmt
+  mail = codereview mail
+  pending = codereview pending
+  submit = codereview submit
+  sync = codereview sync
   co = checkout
   ci = commit -v
   dci = duet-commit
