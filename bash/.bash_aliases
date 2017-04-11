@@ -1,8 +1,8 @@
 # Aliases
-alias ..="cd .."
-alias c="clear"
-alias gti="git"
-alias q="exit"
+alias ..='cd ..'
+alias c='clear'
+alias gti='git'
+alias q='exit'
 
 # git duet
 alias dci='git duet-commit'
@@ -15,11 +15,15 @@ alias machine='docker-machine'
 alias compose='docker-compose'
 alias fig='docker-compose'
 
+alias drm='docker rm'
+alias dps='docker ps'
+alias dl='docker ps -l -q'
+
 # Docker environment variables
-alias de="env | grep DOCKER_"
+alias de='env | grep DOCKER_'
 # Delete all containers
-alias drm="docker rm $(docker ps -a -q)"
+alias drmc='docker rm $(docker ps -a -q)'
 # Delete dangling images
-alias drmid="docker rmi $(docker images -q --filter dangling=true)"
+alias drmid='docker rmi $(docker images -q --filter dangling=true)'
 # Delete all images
-alias drmia="docker rmi $(docker images -q)"
+alias drmia='docker rmi $(docker images -q)'
