@@ -53,7 +53,7 @@
   subi = submodule update --init
   subir = submodule update --init --recursive
   last = log -1 HEAD
-  last-local = show-branch -r --list
+  last-local = show-branch --list
   last-all = show-branch -r --list
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
