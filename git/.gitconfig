@@ -35,8 +35,9 @@
   rollback = reset --soft HEAD^
   glog = log --graph
   llog = log --date=local
-  slog = log --stat --summary    
   plog = log --pretty=oneline
+  slog = log --stat --summary
+  lol = log --pretty=oneline --abbrev-commit --decorate --graph
   tree = log --pretty=oneline --abbrev-commit --decorate --graph --all
   st = status
   br = branch
@@ -60,9 +61,6 @@
   pick = add -p
   ls = ls-files
   cp = cherry-pick
-  llog = log --date=local
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   rmdf = !git rm $(git ls-files --deleted)
   auto-clean = clean -fd
   auto-remove = clean -fdx
