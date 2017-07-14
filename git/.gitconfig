@@ -26,13 +26,14 @@
   submit = codereview submit
   sync = codereview sync
   co = checkout
-  ci = commit -v
-  dci = duet-commit
+  cm = commit -v
+  dcm = duet-commit
   drv = duet-revert
   dmg = duet-merge
   ca = commit --amend
   unstage = reset HEAD
   rollback = reset --soft HEAD^
+  flog = log --pretty=fuller --decorate
   glog = log --graph
   llog = log --date=local
   plog = log --pretty=oneline
