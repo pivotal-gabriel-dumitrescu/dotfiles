@@ -27,3 +27,20 @@ alias drmc='docker rm $(docker ps -a -q)'
 alias drmid='docker rmi $(docker images -q --filter dangling=true)'
 # Delete all images
 alias drmia='docker rmi $(docker images -q)'
+
+# kubernetes
+alias k='kubectl'
+alias k8='kubectl'
+
+alias kall="kubectl get all"
+alias kallns="kubectl get all --all-namespaces"
+alias kcfg="kubectl config"
+alias kdel="kubectl delete"
+alias kdes="kubectl describe"
+alias klogs="kubectl logs"
+
+# kubectx helps you switch between clusters back and forth
+alias kx="kubectx"
+
+# kubens helps you switch between Kubernetes namespaces
+alias kn="kubens"
